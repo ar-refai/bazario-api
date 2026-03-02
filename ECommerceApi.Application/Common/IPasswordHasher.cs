@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ECommerceApi.Application.Common
 {
-    public interface IQueryHandler<TQuery, TResult>
+    public interface IPasswordHasher
     {
-        Task<Result<TResult>> HandleAsync(TQuery query, CancellationToken cancellationToken = default);
+        string Hash(string password);
+        bool Verify(string password, string hash); 
     }
 }

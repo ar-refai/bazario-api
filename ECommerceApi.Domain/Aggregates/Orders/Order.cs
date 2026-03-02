@@ -25,7 +25,7 @@ namespace ECommerceApi.Domain.Aggregates.Orders
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
 
-        IReadOnlyCollection<OrderItem> Items => _items.AsReadOnly();
+        public IReadOnlyCollection<OrderItem> Items => _items.AsReadOnly();
 
         private Order () { }
         private Order (Guid id, Guid customerId, Address shippingAddress, OrderNumber orderNumber) : base(id) 
