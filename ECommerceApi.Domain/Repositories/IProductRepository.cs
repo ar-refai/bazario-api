@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using ECommerceApi.Domain.Aggregates.Products;
 
 namespace ECommerceApi.Domain.Repositories
@@ -19,8 +18,8 @@ namespace ECommerceApi.Domain.Repositories
             decimal? maxPrice,
             CancellationToken cancellationToken = default);
         Task AddAsync(Product product ,CancellationToken cancellationToken = default);
-        Task Update(Product product);
-        Task Delete(Product product);
+        void Update(Product product);
+        void Delete(Product product);
 
     }
 }

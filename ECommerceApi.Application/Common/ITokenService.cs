@@ -10,7 +10,9 @@ namespace ECommerceApi.Application.Common
 {
     public interface ITokenService
     {
-        Task<AuthResponseDto> GenerateTokenAsync(Customer customer, CancellationToken cancellationToken = default);
-        Task<Result<AuthResponseDto>> RefreshTokenAsync(string refreshToken, CancellationToken cancellationToken = default);
+        Task<AuthResponseDto> GenerateTokensAsync(Customer customer, CancellationToken cancellationToken = default);
+        Task<Result<AuthResponseDto>> RefreshTokensAsync(string refreshToken, CancellationToken cancellationToken = default);
+
+
     }
 }

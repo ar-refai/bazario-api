@@ -32,7 +32,7 @@ namespace ECommerceApi.Application.Auth.Commands
             if (!passwordValid)
                 return Error.Unauthorized("Invalid email or password");
 
-            var tokenResult = await _tokenService.GenerateTokenAsync(customer, cancellationToken);
+            var tokenResult = await _tokenService.GenerateTokensAsync(customer, cancellationToken);
             return tokenResult;
         }
     }

@@ -18,6 +18,6 @@ namespace ECommerceApi.Application.Auth.Commands
         }
 
         public async Task<Result<AuthResponseDto>> HandleAsync(RefreshTokenCommand command, CancellationToken cancellationToken = default)
-        => await _tokenService.RefreshTokenAsync(command.RefreshToken, cancellationToken);
+        => await _tokenService.RefreshTokensAsync(command.RefreshToken, cancellationToken);
     }
 }
